@@ -1,6 +1,6 @@
 {
   "name": "react-redux-blaze",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create Redux fetcher hook and reducer all in one",
   "license": "MIT",
   "repository": "github:spiderpoul/react-redux-blaze",
@@ -50,12 +50,12 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.4",
-    "react": "^16.13.1",
     "react-redux": "^7.2.0",
     "redux-blaze": "^0.1.3",
     "rollup-plugin-commonjs": "^10.1.0"
   },
   "devDependencies": {
+    "react": "^16.13.1",
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
