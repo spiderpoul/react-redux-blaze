@@ -69,7 +69,9 @@ export function createReduxFetcher<TModel, TState>(arg: {
         dispatch(fetchData(...args));
     };
 
-    const useData = (...args): FetcherModel<TModel> => {
+    type UseData = FetcherModel<TModel> & {loadData: () => {}}
+
+    const useData = (...args): UseData  => {
         const dispatch = useDispatch();
         const state = useSelector(getState);
         const loadData = useCallback(
@@ -84,7 +86,7 @@ export function createReduxFetcher<TModel, TState>(arg: {
             }
         }, [loadData]);
 
-        return { ...state };
+        return { ...state, loadData };
     };
 
     return {
